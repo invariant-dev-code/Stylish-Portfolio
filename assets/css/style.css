@@ -1,3 +1,7 @@
+body {
+  font-family: "Abril Fatface", serif;
+}
+
 .active {
   display: none;
 }
@@ -9,8 +13,7 @@
 }
 
 #nav {
-  background-color: rgb(0, 162, 255);
-  font-family: "Abril Fatface", serif;
+  background-color: rgb(0, 179, 255);
   position: fixed;
   height: 100%;
   right: 0;
@@ -30,11 +33,14 @@
   transform: translateX(10px);
 }
 
-#header {
-  background-image: url("../images/bg-masthead.jpg");
+#main #download, #header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+}
+
+#header {
+  background-image: url("../images/bg-masthead.jpg");
   height: 100vh;
 }
 #header .header-content {
@@ -43,43 +49,31 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#header h1,
-#header p {
-  font-family: "Abril Fatface", serif;
-}
 
 #main #about {
   padding: 100px 0;
 }
-#main #about h3 {
-  font-family: "Abril Fatface", serif;
-}
 #main #services {
-  background-color: rgb(0, 162, 255);
+  background-color: rgb(0, 179, 255);
   padding: 10px 0;
-  font-family: "Abril Fatface", serif;
 }
 #main #services i {
-  color: rgb(0, 162, 255);
+  color: rgb(0, 179, 255);
   padding: 40px 50px;
 }
 #main #download {
   background-image: url(../images/bg-callout.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   padding: 150px 0;
-  font-family: "Abril Fatface", serif;
 }
 #main #portfolio {
   padding: 80px 0;
-  font-family: "Abril Fatface", serif;
 }
 #main #portfolio .project::after {
   content: " ";
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgb(0, 162, 255);
+  background-color: rgb(0, 179, 255);
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -105,9 +99,8 @@
   z-index: 2;
 }
 #main #resist {
-  background-color: rgb(0, 162, 255);
+  background-color: rgb(0, 179, 255);
   padding: 80px 0;
-  font-family: "Abril Fatface", serif;
 }
 
 #footer {

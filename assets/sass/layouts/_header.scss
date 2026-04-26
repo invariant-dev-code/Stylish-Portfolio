@@ -1,0 +1,13 @@
+@use "../utils/extends";
+// Header
+#header {
+  background-image: url("../images/bg-masthead.jpg");
+  @extend %background-image;
+  height: 100vh;
+  .header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

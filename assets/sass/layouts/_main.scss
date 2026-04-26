@@ -1,0 +1,63 @@
+@use "../utils/variables";
+@use "../utils/extends";
+// Main
+#main {
+  // About
+  #about {
+    padding: 100px 0;
+  }
+  //   Services
+  #services {
+    background-color: variables.$primary-color;
+    padding: 10px 0;
+    i {
+      color: variables.$primary-color;
+      padding: 40px 50px;
+    }
+  }
+  // Download
+  #download {
+    background-image: url(../images/bg-callout.jpg);
+    @extend %background-image;
+    padding: 150px 0;
+  }
+  // Portfolio
+  #portfolio {
+    padding: 80px 0;
+    .project {
+      &::after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: variables.$primary-color;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.8s;
+      }
+      &:hover::after {
+        opacity: 0.8;
+      }
+      cursor: pointer;
+      img {
+        transition: clip-path 0.5s;
+        clip-path: inset(0);
+        &:hover {
+          clip-path: inset(30px);
+        }
+      }
+      .project-content {
+        bottom: 10%;
+        left: 10%;
+        z-index: 2;
+      }
+    }
+  }
+  // Resist
+  #resist {
+    background-color: variables.$primary-color;
+    padding: 80px 0;
+  }
+}
