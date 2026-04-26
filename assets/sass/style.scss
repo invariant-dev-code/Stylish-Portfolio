@@ -1,3 +1,35 @@
+.active {
+  display: none;
+}
+
+#menu {
+  position: fixed;
+  right: 0;
+  z-index: 4;
+}
+
+// Nav
+#nav {
+  background-color: rgb(0, 162, 255);
+  font-family: "Abril Fatface", serif;
+  position: fixed;
+  height: 100%;
+  right: 0;
+  z-index: 3;
+  li {
+    transition: background-color 0.2s;
+    &:hover {
+      background-color: rgb(0, 179, 255);
+      border-bottom: 1px solid #fff;
+    }
+    a {
+      transition: transform 0.6s;
+      &:hover {
+        transform: translateX(10px);
+      }
+    }
+  }
+}
 // Header
 #header {
   background-image: url("../images/bg-masthead.jpg");
