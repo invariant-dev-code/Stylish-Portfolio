@@ -1,0 +1,93 @@
+// Header
+#header {
+  background-image: url("../images/bg-masthead.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  .header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  h1,
+  p {
+    font-family: "Abril Fatface", serif;
+  }
+}
+
+// Main
+#main {
+  // About
+  #about {
+    padding: 100px 0;
+    h3 {
+      font-family: "Abril Fatface", serif;
+    }
+  }
+  //   Services
+  #services {
+    background-color: rgb(0, 162, 255);
+    padding: 10px 0;
+    font-family: "Abril Fatface", serif;
+    i {
+      color: rgb(0, 162, 255);
+      padding: 40px 50px;
+    }
+  }
+  // Download
+  #download {
+    background-image: url(../images/bg-callout.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 150px 0;
+    font-family: "Abril Fatface", serif;
+  }
+  // Portfolio
+  #portfolio {
+    padding: 80px 0;
+    font-family: "Abril Fatface", serif;
+    .project {
+      &::after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgb(0, 162, 255);
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.8s;
+      }
+      &:hover::after {
+        opacity: 0.8;
+      }
+      cursor: pointer;
+      img {
+        transition: clip-path 0.5s;
+        clip-path: inset(0);
+        &:hover {
+          clip-path: inset(30px);
+        }
+      }
+      .project-content {
+        bottom: 10%;
+        left: 10%;
+        z-index: 2;
+      }
+    }
+  }
+  // Resist
+  #resist {
+    background-color: rgb(0, 162, 255);
+    padding: 80px 0;
+    font-family: "Abril Fatface", serif;
+  }
+}
+
+// Footer
+#footer {
+  padding: 50px 0;
+}
